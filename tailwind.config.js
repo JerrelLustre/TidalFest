@@ -1,5 +1,8 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+// /** @type {import('tailwindcss').Config} */
+
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
@@ -37,7 +40,10 @@ module.exports = {
         "btn-shadow": "-10px 12px 0px -2px rgba(0,0,0,0.25)",
         "heading-shadow": "-10px 12px 0px 10px rgba(3,62,69,1)"
       },
-    }
+      borderRadius: {
+        "rounded-xl": false,
+      },
+    },
     },
   plugins: [],
-}
+});
