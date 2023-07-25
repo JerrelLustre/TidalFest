@@ -1,13 +1,16 @@
 // /** @type {import('tailwindcss').Config} */
 
-const withMT = require("@material-tailwind/react/utils/withMT");
-
-module.exports = withMT({
+module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  important: "#root",
   theme: {
     extend: {
+      screens: {
+        "tablet": "768px",
+        "desktop": "1280px"
+      },
       colors: {
         "pale-100": "#fff8ef",
         "pale-200": "#ffeed4",
@@ -33,17 +36,18 @@ module.exports = withMT({
       },
       fontFamily: {
         "montserrat": "Montserrat",
+        "inter": "Inter"
       },
       boxShadow: {
         "image-shadow": "-10px 10px 0px 0px rgba(239,187,36,1)",
         "container-shadow": "-5px 5px 0px 5px rgba(3,62,69,1)",
         "btn-shadow": "-10px 12px 0px -2px rgba(0,0,0,0.25)",
-        "heading-shadow": "-10px 12px 0px 10px rgba(3,62,69,1)"
+        "heading-shadow": "0 8px 8px -4px rgba(3,62,69,0.3)"
       },
-      borderRadius: {
-        "rounded-xl": false,
-      },
+      spacing: {
+        '100':'100px'
+      }
     },
     },
   plugins: [],
-});
+};

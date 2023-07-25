@@ -5,23 +5,20 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@fontsource/inter": "^5.0.5",
+    "@fontsource/montserrat": "^5.0.5",
     "@material-tailwind/react": "^2.0.6",
+    "@mui/icons-material": "^5.14.1",
     "@mui/material": "^5.14.1",
     "@paypal/paypal-js": "^6.0.0",
-    "@stripe/react-stripe-js": "^2.1.1",
-    "@stripe/stripe-js": "^1.54.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "firebase": "^10.0.0",
-    "i": "^0.3.7",
-    "npm": "^9.8.1",
-    "postcss": "^8.4.26",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.2",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

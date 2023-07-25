@@ -1,130 +1,53 @@
-import React from "react";
-import {
-  Navbar,
-  Collapse,
-  Typography,
-  IconButton,
-} from "@material-tailwind/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Collapse } from '@mui/material'
+import NavList from "./NavList";
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import TidalfestLogo from "../../assets/tidalfest-logo.svg";
- 
-function NavList() {
-  return (
-    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
-      <div className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-        <Typography
-          as="li"
-          variant="3xl"
-          color="text-pale-200"
-          className="3xl montserrat font-bold"
-        >
-          <a href="#" className="flex items-center transition-colors font-montserrat">
-            HOME
-          </a>
-        </Typography>
-        <Typography
-          as="li"
-          variant="3xl"
-          color="text-pale-200"
-          className="p-1 font-bold"
-        >
-          <a href="#" className="flex items-center transition-colors font-montserrat">
-            BUY TICKETS
-          </a>
-        </Typography>
-        <Typography
-          as="li"
-          variant="3xl"
-          color="text-pale-200"
-          className="p-1 font-bold"
-        >
-          <a href="#" className="flex items-center transition-colors font-montserrat">
-            LINEUP
-          </a>
-        </Typography>
-        <Typography
-          as="li"
-          variant="3xl"
-          color="text-pale-200"
-          className="p-1 font-bold"
-        >
-          <a href="#" className="flex items-center transition-colors font-montserrat">
-            FAQ
-          </a>
-        </Typography>
-      </div>
-      <div className="my-2 flex gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-        <Typography
-          as="li"
-          variant="3xl"
-          color="text-pale-200"
-          className="3xl montserrat font-bold"
-        >
-          <a href="#" className="font-montserrat">
-            Login
-          </a>
-        </Typography>
-        <Typography
-          as="li"
-          variant="3xl"
-          color="text-pale-200"
-          className="3xl montserrat font-bold"
-        >
-          <a href="#" className="font-montserrat">
-            Signup
-          </a>
-        </Typography>
-      </div>
-    </ul>
-  );
-}
- 
+
+
 export default function Header() {
-  const [openNav, setOpenNav] = React.useState(false);
- 
-  const handleWindowResize = () =>
-    window.innerWidth >= 960 && setOpenNav(false);
- 
-  React.useEffect(() => {
-    window.addEventListener("resize", handleWindowResize);
- 
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
- 
+
+  const [collapsed, setCollapsed] = useState(false);
+
+  const handleCollapseToggle = () => {
+    setCollapsed(!collapsed);
+  };
+
   return (
-    <Navbar className="mx-auto px-4 py-3 bg-orange-100 bg-opacity-100 w-screen">
-      <div className="flex items-center text-pale-200">
-        <div className="flex flex-row items-center text-pale-200">
-          <div className="items-center space-x-3.75"> 
+    <header className="fixed top-0 mx-auto px-4 py-3 bg-orange-100 bg-opacity-100 w-screen shadow-heading-shadow">
+      <nav className="flex items-center gap-6 text-pale-200">
+        <div className="flex flex-row items-center gap-6 w-full">
+          <Link to="/" > 
             <img
               src={TidalfestLogo}
               alt="Tidalfest Logo"
-              className="p-3 w-50" // Adjust the height and width as needed
+              className="py-3"
+              width="180px"
             />
-          </div>
-          <div className="hidden lg:block">
+          </Link>
+          <div className="hidden w-full tablet:block">
             <NavList />
           </div>
         </div>
-        <IconButton
-          variant="text"
-          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
-          ripple={false}
-          onClick={() => setOpenNav(!openNav)}
+        <div
+          className="cursor-pointer tablet:hidden"
+          onClick={handleCollapseToggle}
         >
-          {openNav ? (
-            <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+          {collapsed ? (
+            <CloseIcon />
           ) : (
-            <Bars3Icon className="h-6 w-6" strokeWidth={2} />
+            <MenuIcon />
           )}
-        </IconButton>
-      </div>
-      <Collapse open={openNav}>
+        </div>
+      </nav>
+      <Collapse 
+        in={collapsed}
+        className="text-pale-200 tablet:hidden"
+      >
         <NavList />
       </Collapse>
-    </Navbar>
+    </header>
   );
 }
