@@ -23,6 +23,7 @@ function App() {
     <div className='App'>
       <BrowserRouter>
         <ThemeProvider theme={theme}>
+
           <AppLayout>
             <Routes>
               <Route path="/" element={<Home />} />
