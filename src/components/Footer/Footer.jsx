@@ -1,7 +1,20 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
+import Button from "../Button";
+import NavList from "./NavList";
+import Social from "./Social";
+import Copyright from "./Copyright";
+
+
+
 
 export default function Footer() {
   return (
-    <footer>Footer</footer>
+    <footer className="mx-auto py-8 bg-orange-100 flex flex-col items-center gap-20 lg:flex-row lg:items-start lg:justify-center">
+      <Button text="GET TICKETS"/>
+      <NavList />
+      <Social />
+      <Copyright />
+    </footer>
   )
 }
