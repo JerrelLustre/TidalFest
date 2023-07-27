@@ -59,7 +59,7 @@ module.exports = {
       },
       lineHeight: {
         '150' : '27px',
-      }
+      },
     },
     },
   plugins: [],
