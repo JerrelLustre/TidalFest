@@ -4,7 +4,7 @@ import { styled } from "@mui/material/styles";
 // components
 import wave from '../../../assets/images/wave.svg';
 import Button from '../../../components/Button';
-import VancouverFestivalBanner from '../../../components/VancouverFestivalBanner';
+import H1Container from '../../../components/H1Container';
 
 export default function HeroBanner() {
 
@@ -57,7 +57,7 @@ export default function HeroBanner() {
           />
         </div>
       </section>
-      <VancouverFestivalBanner />
+      <H1Container text="Vancouver Summer Music Festival" />
       <Typography className="bg-jade-300 text-white text-center font-extrabold">July 27 - July 30</Typography>
     </>
 

@@ -1,7 +1,15 @@
+import PageLayout from "../../layouts/PageLayout"
+import MaxWidthLayout from "../../layouts/MaxWidthLayout"
+
 export default function Faq() {
   return (
-    <div>
+    <PageLayout
+      h1Text="FAQ"
+      sloganText="Frequently Asked Questions"
+    >
+      <MaxWidthLayout>
         This is FAQ page.
-    </div>
+      </MaxWidthLayout>
+    </PageLayout>
   )
 }
