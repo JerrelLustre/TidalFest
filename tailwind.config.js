@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        "mobile": "390px",
+        "mobile": "390px", 
         "tablet": "768px",
         "desktop": "1280px"
       },
@@ -50,12 +50,19 @@ module.exports = {
         "sectionheading-shadow": "-10px 10px 0px 0px #033E45;"
       },
       spacing: {
-        '100':'100px'
+        '100':'100px',
+        '400': '400px',
+        '90vh': '90vh',
       },
       maxWidth: {
         'mobile': '97vw',
         'tablet': '98vw',
-        'desktop': '99vw'
+        'desktop': '99vw',
+        '1280': '1280px'
+      },
+      backgroundImage: {
+        'section-bg': "url('/src/assets/images/section-bg.webp')",
+        'hero-bg': "url('/src/assets/images/heroBanner.webp')"
       },
     },
     },

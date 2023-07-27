@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-import FacebookIcon from "../../../assets/facebook.svg";
-import InstagramIcon from "../../../assets/instagram.svg";
-import TwitterIcon from "../../../assets/twitter.svg";
+import FacebookIcon from "../../../assets/images/facebook.svg";
+import InstagramIcon from "../../../assets/images/instagram.svg";
+import TwitterIcon from "../../../assets/images/twitter.svg";
 
 function Social() {
     const Title = styled(Typography)(() => ({

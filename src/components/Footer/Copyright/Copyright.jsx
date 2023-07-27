@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-import TidalfestLogoLight from "../../../assets/tidalfest-logo-light.svg";
+import TidalfestLogoLight from "../../../assets/images/tidalfest-logo-light.svg";
 
 function Copyright() {
     const Copy = styled(Typography)(() => ({

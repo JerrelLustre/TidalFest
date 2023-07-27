@@ -2,6 +2,7 @@ import { createTheme } from "@mui/material";
 import "@fontsource/inter";
 import "@fontsource/montserrat";
 import "@fontsource/montserrat/600.css";
+import "@fontsource/montserrat/900.css";
 import '@fontsource/permanent-marker';
 
 export const theme = createTheme({
@@ -49,12 +50,8 @@ export const theme = createTheme({
     },
 
     typography: {
-        fontFamily: [
-            'Inter, sans-serif',
-            'Montserrat, sans-serif',
-            'Permanent Marker, sans-serif'
-        ].join(','),
-        
+        fontFamily: 'Montserrat, sans-serif',
+
         h1: {
             fontFamily: 'Montserrat, sans-serif',
             fontSize: '28px',
@@ -80,9 +77,11 @@ export const theme = createTheme({
 
     breakpoints: {
         values: {
+            mobile: 390,
             tablet: 768,
             desktop: 1280
         }
-    }
+    },
+
 
 })

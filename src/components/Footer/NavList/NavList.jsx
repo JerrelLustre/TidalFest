@@ -5,7 +5,6 @@ import { styled } from "@mui/material/styles";
 function NavList() {
 
     const LiTag = styled(ListItem)(() => ({
-        as: "li",
         color: "#FFF8EF",
         fontFamily: "Montserrat",
         fontWeight: "normal",

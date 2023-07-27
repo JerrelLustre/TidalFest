@@ -1,7 +1,14 @@
+import HeroBanner from "./HeroBanner";
+import Musicians from "./Musicians";
+import About from "./About";
+
+
 export default function Home() {
   return (
-    <div className="h-screen flex justify-center items-center font-flegrei">
-      Homepage
-    </div>
+    <>
+      <HeroBanner />
+      <Musicians />
+      <About />
+    </>
   )
 }

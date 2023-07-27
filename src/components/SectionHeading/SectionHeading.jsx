@@ -11,13 +11,8 @@ function SectionHeading({text}) {
     }))
 
     return (
-        <div 
-            className="flex flex-col text-center"
-            style={{ width: "fit-content "}}     
-        >
-            <Heading className="rounded-lg py-4 px-8 bg-orange-200 text-pale-200 font-bold text-3xl shadow-sectionheading-shadow">
-                {/* Remove below example text and add text prop to individual components in layout */}
-                SECTION HEADING
+        <div className="flex flex-col text-center justify-center items-center my-20">
+            <Heading className="rounded-lg py-4 px-8 bg-orange-200 text-pale-200 font-bold text-3xl uppercase shadow-sectionheading-shadow">
                 {text}
             </Heading>
         </div>

@@ -12,8 +12,6 @@ function SubBanner({text}) {
         <div className="bg-yellow-100">
             <div className="flex flex-col items-center w-full text-center">
                 <Slogan className="text-pale-200 tracking-0.225 p-6 text-2xl">
-                    {/* Remove below text and add text prop to component in layout */}
-                    Sub Banner, ADD SLOGAN HERE 
                     {text}
                 </Slogan>
             </div>
