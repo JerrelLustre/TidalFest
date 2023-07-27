@@ -15,7 +15,7 @@ import Notfound from './pages/Notfound'
 import Tickets from './pages/Tickets'
 import AppLayout from './layouts/AppLayout';
 import { theme } from './theme/theme';
-
+import LineupItem from './components/LineupItem';
 
 function App() {
 
@@ -23,7 +23,7 @@ function App() {
     <div className='App'>
       <BrowserRouter>
         <ThemeProvider theme={theme}>
-
+          <LineupItem />
           <AppLayout>
             <Routes>
               <Route path="/" element={<Home />} />
