@@ -2,34 +2,41 @@ import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
+// assets
 import FacebookIcon from "../../../assets/images/facebook.svg";
 import InstagramIcon from "../../../assets/images/instagram.svg";
 import TwitterIcon from "../../../assets/images/twitter.svg";
 
+
 function Social() {
-    const Title = styled(Typography)(() => ({
-        as: "h2",
+    
+    const Title = styled(Typography)(({ theme }) => ({
         fontFamily: "Montserrat",
         fontWeight: "bold",
         fontSize: "24px",
-        color: "#FFF8EF",
+        color: theme.palette.pale100.main,
         marginBottom: "23px",
     }))
 
     return (
         <div className="flex flex-col items-center">
-            <Title>Connect with Us</Title>
+            <Title variant="h5">Connect with Us</Title>
             <div className="flex flex-row">
-                <Link to="/">
+                <Link 
+                    to="https://www.facebook.com/" 
+                    target="_blank"
+                >
                     <img 
                     src={FacebookIcon} 
                     alt="Facebook Link" 
-                    className=""
                     width="43.16px"
                     height="auto"
                     />
                 </Link>
-                <Link to="/">
+                <Link 
+                    to="https://www.instagram.com/"
+                    target="_blank"
+                >
                     <img 
                     src={InstagramIcon} 
                     alt="Instagram Link" 
@@ -38,11 +45,13 @@ function Social() {
                     height="auto"
                     />
                 </Link>
-                <Link to="/">
+                <Link 
+                    to="https://www.twitter.com/"
+                    target="_blank"
+                >
                     <img 
                     src={TwitterIcon}
                     alt="Twitter Link" 
-                    className=""
                     width="43.16px"
                     height="auto"
                     />

@@ -5,8 +5,7 @@ import { styled } from "@mui/material/styles";
 function NavList() {
 
   const LiTag = styled(ListItem)(({ theme }) => ({
-    as: "li",
-    color: theme.palette.pale200,
+    color: theme.palette.pale200.main,
     fontFamily: "Montserrat",
     fontWeight: "bold",
     width: "auto",
@@ -26,7 +25,7 @@ function NavList() {
         </LiTag>
         <LiTag>
           <Link 
-            to="/tickets" 
+            to="/tickets/order" 
             className="flex items-center"
           >
             BUY TICKETS

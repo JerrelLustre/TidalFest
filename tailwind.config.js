@@ -46,10 +46,11 @@ module.exports = {
         "container-shadow": "-5px 5px 0px 5px rgba(3,62,69,1)",
         "btn-shadow": "-10px 12px 0px -2px rgba(0,0,0,0.25)",
         "heading-shadow": "0 8px 8px -4px rgba(3,62,69,0.3)",
-        "subbanner-shadow": "-10px 12px 0px 10px #033E45;",
-        "sectionheading-shadow": "-10px 10px 0px 0px #033E45;"
+        "subbanner-shadow": "-6px 12px #033E45",
+        "sectionheading-shadow": "-10px 10px 0px 0px #033E45"
       },
       spacing: {
+        '42': '42px',
         '100':'100px',
         '400': '400px',
         '90vh': '90vh',
@@ -58,7 +59,8 @@ module.exports = {
         'mobile': '97vw',
         'tablet': '98vw',
         'desktop': '99vw',
-        '1280': '1280px'
+        '1280': '1280px',
+        'bodycontent-container': '670px',
       },
       backgroundImage: {
         'section-bg': "url('/src/assets/images/section-bg.webp')",

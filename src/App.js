@@ -13,6 +13,8 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Notfound from './pages/Notfound'
 import Tickets from './pages/Tickets'
+import ThankYou from './pages/Tickets/ThankYou';
+import Order from './pages/Tickets/Order'
 import AppLayout from './layouts/AppLayout';
 import { theme } from './theme/theme';
 
@@ -29,10 +31,10 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/lineup" element={<Lineup />} />
               <Route path="/faq" element={<Faq />} />
-              <Route path="/tickets">
-                <Route path="select" element={<Tickets />} />
-                <Route path="order" element={<Tickets />} />
-                <Route path="receipt" element={<Tickets />} />
+              <Route path="/tickets/" element={<Tickets />} >
+                <Route index element={<Order />} />
+                <Route path="order" element={<Order />} />
+                <Route path="thankyou" element={<ThankYou />} />
               </Route>
               <Route path="/account">
                 <Route path="login" element={<Login />} />

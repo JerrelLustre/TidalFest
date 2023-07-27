@@ -4,26 +4,28 @@ import { styled } from "@mui/material/styles";
 
 function NavList() {
 
-    const LiTag = styled(ListItem)(() => ({
-        color: "#FFF8EF",
+    const LiTag = styled(ListItem)(({ theme }) => ({
+        color: theme.palette.pale100.main,
         fontFamily: "Montserrat",
         fontWeight: "normal",
         fontSize: "18px",
-        width: "auto",
+        width: "100%",
         lineHeight: 1.125,
+        textAlign: "center",
         padding: "0",
+        justifyContent: "center",
         marginTop: "5px", 
         "&:not(:first-of-type)": {
             marginTop: "5px",
         },
     }))
 
-    const Title = styled(Typography)(() => ({
+    const Title = styled(Typography)(({ theme }) => ({
         as: "h2",
         fontFamily: "Montserrat",
         fontWeight: "bold",
         fontSize: "24px",
-        color: "#FFF8EF",
+        color: theme.palette.pale100.main,
         marginBottom: "23px",
     }))
 
@@ -32,42 +34,27 @@ function NavList() {
             <Title>TidalFest</Title>
             <ul>
                 <LiTag>
-                    <Link
-                        to="/"
-                    >
+                    <Link to="/" >
                     Homepage
                     </Link>
                 </LiTag>
-            </ul>
-            <ul>
                 <LiTag>
-                    <Link
-                        to="/"
-                    >
+                    <Link to="/" >
                     Events
                     </Link>
                 </LiTag>
-            </ul>
-            <ul>
                 <LiTag>
-                    <Link
-                        to="/faq"
-                    >
+                    <Link to="/faq" >
                     FAQ
                     </Link>
                 </LiTag>
-            </ul>
-            <ul>
                 <LiTag>
-                    <Link
-                        to="/tickets"
-                    >
+                    <Link to="/tickets/order" >
                     Ticket Purchase
                     </Link>
                 </LiTag>
             </ul>
         </div>
-
     )
 }
 

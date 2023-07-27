@@ -1,9 +1,9 @@
-import React from 'react'
+import { Outlet } from "react-router-dom"
 
 export default function Tickets() {
   return (
-    <div>
-        This is Tickets page.
-    </div>
+    <>
+      <Outlet />
+    </>
   )
 }
