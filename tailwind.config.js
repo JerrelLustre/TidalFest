@@ -66,6 +66,9 @@ module.exports = {
         'section-bg': "url('/src/assets/images/section-bg.webp')",
         'hero-bg': "url('/src/assets/images/heroBanner.webp')"
       },
+      lineHeight: {
+        '150' : '27px',
+      },
     },
     },
   plugins: [],
