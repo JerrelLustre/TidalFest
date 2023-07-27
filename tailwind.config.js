@@ -37,7 +37,9 @@ module.exports = {
       },
       fontFamily: {
         "montserrat": "Montserrat",
-        "inter": "Inter"
+        "inter": "Inter",
+        "flegrei": "flegrei",
+        "permanentmarker": "Permanent Marker",
       },
       boxShadow: {
         "image-shadow": "-10px 10px 0px 0px rgba(239,187,36,1)",

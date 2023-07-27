@@ -14,7 +14,7 @@ function NavList() {
         lineHeight: 1.125,
         padding: "0",
         marginTop: "5px", 
-        "&:not(:first-child)": {
+        "&:not(:first-of-type)": {
             marginTop: "5px",
         },
     }))

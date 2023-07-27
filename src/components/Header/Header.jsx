@@ -16,7 +16,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 mx-auto px-4 py-3 bg-orange-100 bg-opacity-100 w-screen shadow-heading-shadow">
+    <header className="fixed top-0 mx-auto px-4 py-3 bg-orange-100 bg-opacity-100 w-full shadow-heading-shadow">
       <nav className="flex items-center gap-6 text-pale-200">
         <div className="flex flex-row items-center gap-6 w-full">
           <Link to="/" > 

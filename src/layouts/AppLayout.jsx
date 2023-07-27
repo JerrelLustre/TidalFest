@@ -5,7 +5,7 @@ export default function AppLayout({ children }) {
   return (
     <>
       <Header />
-      <main>
+      <main className="h-screen">
         {children}
       </main>
       <Footer />

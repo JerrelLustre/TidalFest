@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Button from "../Button";
 import NavList from "./NavList";
 import Social from "./Social";
