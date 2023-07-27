@@ -2,6 +2,7 @@ import { createTheme } from "@mui/material";
 import "@fontsource/inter";
 import "@fontsource/montserrat";
 import "@fontsource/montserrat/600.css";
+import '@fontsource/permanent-marker';
 
 export const theme = createTheme({
 
@@ -50,7 +51,8 @@ export const theme = createTheme({
     typography: {
         fontFamily: [
             'Inter, sans-serif',
-            'Montserrat, sans-serif'
+            'Montserrat, sans-serif',
+            'Permanent Marker, sans-serif'
         ].join(','),
         
         h1: {

@@ -14,7 +14,8 @@ import Signup from './pages/Signup'
 import Notfound from './pages/Notfound'
 import Tickets from './pages/Tickets'
 import AppLayout from './layouts/AppLayout';
-import { theme } from './theme/theme'
+import { theme } from './theme/theme';
+
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
     <div className='App'>
       <BrowserRouter>
         <ThemeProvider theme={theme}>
+
           <AppLayout>
             <Routes>
               <Route path="/" element={<Home />} />
