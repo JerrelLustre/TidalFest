@@ -48,13 +48,18 @@ module.exports = {
         "sectionheading-shadow": "-10px 10px 0px 0px #033E45;"
       },
       spacing: {
-        '100':'100px'
+        '100':'100px',
+        '42': '42px',
       },
       maxWidth: {
         'mobile': '97vw',
         'tablet': '98vw',
-        'desktop': '99vw'
+        'desktop': '99vw',
+        'bodycontent-container': '670px',
       },
+      lineHeight: {
+        '150' : '27px',
+      }
     },
     },
   plugins: [],
