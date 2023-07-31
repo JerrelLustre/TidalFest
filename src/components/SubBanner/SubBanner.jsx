@@ -9,7 +9,7 @@ function SubBanner({text}) {
     }))
 
     return (
-        <div className=" bg-yellow-100 flex flex-col items-center w-full text-center shadow-subbanner-shadow">
+        <div className=" bg-yellow-100 flex flex-col items-center w-full text-center shadow-subbanner-shadow relative">
             <Slogan className="text-pale-200 tracking-0.225 p-6 text-2xl">
                 {text}
             </Slogan>

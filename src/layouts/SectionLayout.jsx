@@ -1,7 +1,10 @@
-export default function SectionLayout({ children }) {
+export default function SectionLayout({ children, backgroundImage }) {
   return (
-    <section className="bg-jade-100">
-        <div className="bg-section-bg bg-cover bg-center">
+    <section>
+        <div 
+          className="bg-section-bg bg-cover bg-center"
+          style={{ backgroundImage: `url(${backgroundImage})`}}
+        >
             {children}
         </div>
     </section>
