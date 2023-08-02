@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-function SectionSubheadingLineup({text}) {
+function SectionSubheadingLineup({ dateText, subheadingText}) {
     const Date = styled(Typography)(({theme}) => ({
         as:"span",
         fontFamily: "Montserrat",
@@ -23,9 +23,7 @@ function SectionSubheadingLineup({text}) {
                 style={{ width: "fit-content "}}
             >
                 <Date className="bg-pale-200 rounded-lg py-2 px-5 text-red-200 font-extrabold text-xl shadow-sectionheading-shadow tracking-[.15em]">
-                    {/* Remove below example text and add text prop to individual components in layout */}
-                    JULY 26
-                    {text}
+                    {dateText}
                 </Date>
             </div>
             <div
@@ -33,9 +31,7 @@ function SectionSubheadingLineup({text}) {
                 style={{ width: "fit-content "}}
             >
                 <Subheading className="bg-jade-200 rounded-lg py-2 px-5 text-pale-200 font-bold text-2xl shadow-sectionheading-shadow">
-                    {/* Remove below example text and add text prop to individual components in layout */}
-                    SECTION SUBHEADING
-                    {text}
+                    {subheadingText}
                 </Subheading>
             </div>
         </div>

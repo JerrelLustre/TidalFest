@@ -18,6 +18,7 @@ module.exports = {
         "yellow-100": "#f4bb15",
         "orange-100": "#ef693c",
         "orange-200": "#ffa573",
+        "orange-300": "#ef7c3c",
         "red-100": "#f04346",
         "red-200": "#ff797b",
         "jade-100": "#067d7d",
@@ -61,6 +62,7 @@ module.exports = {
         'desktop': '99vw',
         '1280': '1280px',
         'bodycontent-container': '670px',
+        'lineup': '50rem',
       },
       backgroundImage: {
         'section-bg': "url('/src/assets/images/section-bg.webp')",
