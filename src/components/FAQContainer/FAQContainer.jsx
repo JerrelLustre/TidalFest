@@ -1,6 +1,6 @@
 import React from 'react'
 import Body from '../Body/Body'
-import { Accordion, AccordionSummary, AccordionDetails} from '@mui/material'
+import { Accordion, AccordionSummary, AccordionDetails, Typography} from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const FAQInfo = [
@@ -45,10 +45,14 @@ export default function FAQContainer() {
                     bgcolor: 'pale100.main'
                 }}
                 >
-                {item.question}
+                    <Typography variant='p'>
+                        {item.question}
+                    </Typography>
                 </AccordionSummary>
             <AccordionDetails>
-                {item.answer}
+                    <Typography variant='p'>
+                        {item.answer}
+                    </Typography>
             </AccordionDetails>
             </Accordion>
         ))}
