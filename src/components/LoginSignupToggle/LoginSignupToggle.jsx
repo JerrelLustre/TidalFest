@@ -22,7 +22,7 @@ export default function LoginSignupToggle({promptText, toggleText, toggleLink}) 
             <Prompt className="mb-2">
                 {promptText}
             </Prompt>
-            <Toggle to={toggleLink}>
+            <Toggle href={`/account/${toggleLink}`}>
                 {toggleText}
             </Toggle>
         </div>
