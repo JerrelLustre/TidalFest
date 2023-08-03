@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-function SectionHeading({text}) {
+function SectionHeading({text, isSmallMargin}) {
     
     const Heading = styled(Typography)(({theme}) => ({
         fontFamily: "Montserrat",
@@ -11,7 +11,7 @@ function SectionHeading({text}) {
     }))
 
     return (
-        <div className="flex flex-col text-center justify-center items-center my-20">
+        <div className={`flex flex-col text-center justify-center items-center ${isSmallMargin ? "mb-6" : "my-20"}`}>
             <Heading 
                 variant="h2"
                 className="rounded-lg py-4 px-8 bg-orange-200 text-pale-200 font-bold text-3xl uppercase shadow-sectionheading-shadow"

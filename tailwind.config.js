@@ -71,6 +71,9 @@ module.exports = {
       lineHeight: {
         '150' : '27px',
       },
+      minHeight: {
+        'TicketsThankyou': 'calc(100vh - 200px)',
+      }
     },
     },
   plugins: [],
