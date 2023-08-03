@@ -4,6 +4,8 @@ import {
   Route 
 } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material'
+import { theme } from './theme/theme';
+import { ScrollToTop } from './components/ScrollToTop/ScrollToTop';
 
 // components
 import Home from './pages/Home'
@@ -16,15 +18,16 @@ import Tickets from './pages/Tickets'
 import ThankYou from './pages/Tickets/ThankYou';
 import Order from './pages/Tickets/Order'
 import AppLayout from './layouts/AppLayout';
-import { theme } from './theme/theme';
+
+
 
 function App() {
 
   return (
-    <div className='App'>
+    <div className='App bg-jade-100'>
       <BrowserRouter>
         <ThemeProvider theme={theme}>
-
+        <ScrollToTop />
           <AppLayout>
             <Routes>
               <Route path="/" element={<Home />} />

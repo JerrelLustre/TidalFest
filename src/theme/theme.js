@@ -1,6 +1,8 @@
 import { createTheme } from "@mui/material";
 import "@fontsource/inter";
 import "@fontsource/montserrat";
+import '@fontsource/montserrat/400.css';
+import '@fontsource/montserrat/500.css';
 import "@fontsource/montserrat/600.css";
 import "@fontsource/montserrat/900.css";
 import '@fontsource/permanent-marker';
