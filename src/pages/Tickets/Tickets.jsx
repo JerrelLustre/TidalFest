@@ -5,7 +5,7 @@ import { OrderContextProvider } from "../../context/OrderContext"
 export default function Tickets() {
   
   const initialOptions = {
-    "client-id": `${process.env.REACT_APP_PAYPAL_MERCHANTID}`,
+    "client-id": `${process.env.REACT_APP_PAYPAL_CLIENTID}`,
     "currency": "CAD",
     "components": "buttons",
   }
