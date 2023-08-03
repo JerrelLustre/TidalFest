@@ -8,7 +8,8 @@ import GoogleIcon from "../../assets/images/google-loginsignup.svg";
 import GitHubIcon from "../../assets/images/github-loginsignup.svg";
 
 export default function SocialLoginSignup({ promptText, altText }) {
-  const [isLoggingIn, setIsLoggingIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  
 
   const handleSocialLogin = (provider) => {
     // Add your Firebase authentication logic for social login here
