@@ -1,9 +1,9 @@
-import { Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 function Body({ children }) {
 
-    const BodyContent = styled(Typography)(({theme}) => ({
+    const BodyContent = styled(Box)(({theme}) => ({
         fontSize: "18px",
         fontFamily: "Montserrat",
         margin: "0",
