@@ -29,9 +29,9 @@ function LineupDay1() {
         <div className="items-center">
           <List className="flex flex-col md:flex-row md:flex-wrap">
             {bandsDay1.map((band, index) => (
-            <ListItem key={index} className="flex flex-col text-center flex-1">
+            <ListItem key={index} className="flex flex-col text-center md:min-w-max flex-1">
               <BandButton
-                className="bg-orange-300 font-bold text-pale-100 text-3xl shadow-sectionheading-shadow min-w-max mb-8">
+                className="bg-orange-300 font-bold text-pale-100 text-3xl shadow-sectionheading-shadow mb-8">
                   {/* min-w-max used to prevent text from wrapping 
                   this is causing the layout to break at around 370px. If removed, the text wraps but layout differs from design */}
                   {band}
