@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ListItem } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import { useAuthContext } from "../../../hooks/useAuthContext";
 
 function NavList() {
 
@@ -11,6 +12,9 @@ function NavList() {
     width: "auto",
     padding: "0"
   }))
+
+  // check user existence to display different nav buttons
+  const { user } = useAuthContext()
 
   return (
     <ul className="flex w-full flex-col gap-2 p-4 tablet:p-0 tablet:flex-row tablet:items-center tablet:justify-between">
@@ -49,18 +53,29 @@ function NavList() {
         </LiTag>
       </div>
       <div className="my-2 flex gap-2 tablet:mb-0 tablet:mt-0 tablet:flex-row tablet:items-center tablet:gap-6">
-        <Link 
-          to="account/login" 
-          className="font-montserrat font-bold"
-        >
-          Login
-        </Link>
-        <Link 
-          to="/account/signup" 
-          className="font-montserrat font-bold"
-        >
-          Signup
-        </Link>
+        { user ? (
+          <button 
+            className="font-montserrat font-bold"
+            // onClick={logout}
+          >
+            Logout
+          </button> ) : (
+          <>
+            <Link 
+              to="account/login" 
+              className="font-montserrat font-bold"
+            >
+              Login
+            </Link>
+            <Link 
+              to="/account/signup" 
+              className="font-montserrat font-bold"
+            >
+              Signup
+            </Link>
+          </>
+          )
+        }
       </div>
     </ul>
   )

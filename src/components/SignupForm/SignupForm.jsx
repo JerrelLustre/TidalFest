@@ -20,7 +20,7 @@ function SignupForm () {
   
     return (
         <div className="pb-24">
-            <form className="flex flex-col items-center gap-8 mx-auto bg-pale-100 border border-8 border-red-200 rounded-lg px-6 pt-6 pb-10 w-[360px]">
+            <form className="flex flex-col items-center gap-8 mx-auto bg-pale-100 border-8 border-red-200 rounded-lg px-6 pt-6 pb-10 w-[360px]">
                 <div>
                     <TextField
                         label="Full Name"

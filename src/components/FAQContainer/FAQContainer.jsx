@@ -35,8 +35,8 @@ const FAQInfo = [
 export default function FAQContainer() {
     return(
     <Body>
-        {FAQInfo.map(item =>(
-            <Accordion>
+        {FAQInfo.map((item, index) =>(
+            <Accordion key={index}>
                 <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
@@ -49,11 +49,11 @@ export default function FAQContainer() {
                         {item.question}
                     </Typography>
                 </AccordionSummary>
-            <AccordionDetails>
+                <AccordionDetails>
                     <Typography variant='p'>
                         {item.answer}
                     </Typography>
-            </AccordionDetails>
+                </AccordionDetails>
             </Accordion>
         ))}
     </Body>

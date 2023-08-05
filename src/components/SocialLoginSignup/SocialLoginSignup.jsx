@@ -9,7 +9,13 @@ import GoogleIcon from "../../assets/images/google-loginsignup.svg";
 import GitHubIcon from "../../assets/images/github-loginsignup.svg";
 
 // firebase auth
-import { auth, GoogleAuthProvider, GithubAuthProvider, FacebookAuthProvider, signInWithPopup } from '../../firebase/config';
+import { 
+  auth, 
+  GoogleAuthProvider, 
+  GithubAuthProvider, 
+  FacebookAuthProvider, 
+  signInWithPopup 
+} from '../../firebase/config';
 
 
 export default function SocialLoginSignup({ promptText, altText }) {
