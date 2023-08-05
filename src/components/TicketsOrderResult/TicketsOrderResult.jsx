@@ -1,7 +1,3 @@
-import { 
-    useState,
-    useEffect
-} from "react";
 import { Typography } from "@mui/material"
 import { styled } from "@mui/material/styles";
 import RemoveIcon from '@mui/icons-material/Remove';
@@ -11,6 +7,8 @@ import { useOrderContext } from "../../hooks/useOrderContext"
 import Body from "../Body"
 
 export default function TicketsOrderResult() {
+
+    const { qty, price, tax, total, handleIncrement, handleDecrement } = useOrderContext()
 
     const TitleTxt = styled(Typography)(({theme}) => ({
         fontWeight: "600",
@@ -34,44 +32,6 @@ export default function TicketsOrderResult() {
         minWidth: "2rem",
     }))
 
-    const { setOrder } = useOrderContext()
-
-    const [ qty, setQty ] = useState(1)
-    const [ price, setPrice ] = useState(16.99)
-    const [ tax, setTax ] = useState(2.04)
-    const [ total, setTotal ] = useState(19.03)
-
-    const increment = () => { 
-        setQty(qty + 1) 
-        const newPrice = (price + 16.99).toFixed(2)
-        setPrice(parseFloat(newPrice))
-        const newTax = (tax + 2.04).toFixed(2)
-        setTax(parseFloat(newTax))
-        const newTotal = (total + 19.03).toFixed(2)
-        setTotal(parseFloat(newTotal))
-    }
-
-    const decrement = () => {
-        setQty(qty - 1)
-        const newPrice = (price - 16.99).toFixed(2)
-        setPrice(parseFloat(newPrice))
-        const newTax = (tax - 2.04).toFixed(2)
-        setTax(parseFloat(newTax))
-        const newTotal = (total - 19.03).toFixed(2)
-        setTotal(parseFloat(newTotal))
-
-        if (qty <= 1) { 
-            setQty(1) 
-            setPrice(16.99)
-            setTax(2.04)
-            setTotal(19.03)
-        }
-    }
-
-    useEffect(() => {
-        setOrder(String(total))
-    }, [total, setOrder])
-
   return (
     <>
     <Body>
@@ -85,12 +45,12 @@ export default function TicketsOrderResult() {
                 <div className="flex justify-end items-center">
                     <RemoveIcon 
                         className="text-[2rem] text-orange-100 cursor-pointer"
-                        onClick={decrement}
+                        onClick={handleDecrement}
                     />
                     <QtyTxt>{qty}</QtyTxt>
                     <AddIcon 
                         className="text-[2rem] text-orange-100 cursor-pointer" 
-                        onClick={increment}
+                        onClick={handleIncrement}
                     />
                 </div>
             </div>

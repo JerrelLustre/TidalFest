@@ -1,25 +1,19 @@
 import { PayPalButtons } from "@paypal/react-paypal-js"
 import { useNavigate } from "react-router-dom"
-import { useOrderContext } from "../../hooks/useOrderContext"
 
 export default function PaypalButton() {
 
     const navigate = useNavigate()
-    const { order } = useOrderContext()
-   console.log(order)
-    // const [ {options}, dispatch ] = usePayPalScriptReducer()
    
- 
     const createOrder = (data, actions) => {
 
-        console.log("t1");
-        console.log(order);
-        
+        const savedOrder = localStorage.getItem("order")
+
         return actions.order.create({
             purchase_units: [
                 {
                     amount: {
-                        value: `${order}`,
+                        value: `${savedOrder}`,
                     }
                 }
             ]
