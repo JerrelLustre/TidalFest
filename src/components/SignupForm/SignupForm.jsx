@@ -1,20 +1,22 @@
 import { useState } from 'react';
-
+import { useSignup } from '../../hooks/useSignup';
 import { TextField } from "@mui/material";
 
-import Button from "../Button";
+import FormButton from "../FormButton";
 import LoginSignupToggle from "../LoginSignupToggle";
 import SocialLoginSignup from '../SocialLoginSignup';
 
 function SignupForm () {
-    const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [displayName, setDisplayName] = useState('');
+    const { signup, isPending, error } = useSignup()
   
-    const handleSignup = () => {
-      // Handle authentication here
-    };
+    const handleSignup = (e) => {
+      e.preventDefault()
+      signup(email, password, confirmPassword, displayName)
+    }
   
     return (
         <div className="pb-24">
@@ -23,8 +25,8 @@ function SignupForm () {
                     <TextField
                         label="Full Name"
                         type="text"
-                        value={fullName}
-                        onChange={(e) => setFullName(e.target.value)}
+                        value={displayName}
+                        onChange={(e) => setDisplayName(e.target.value)}
                         fullWidth
                         margin="normal"
                         variant="standard"
@@ -32,6 +34,7 @@ function SignupForm () {
                     <TextField
                         label="Email"
                         type="email"
+                        autoComplete="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         fullWidth
@@ -41,6 +44,7 @@ function SignupForm () {
                     <TextField
                         label="Password"
                         type="password"
+                        autoComplete="new-password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         fullWidth
@@ -50,6 +54,8 @@ function SignupForm () {
                     <TextField
                         label="Confirm Password"
                         type="password"
+                        autoComplete="new-password"
+                        obscuretext="true"
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                         fullWidth
@@ -58,10 +64,12 @@ function SignupForm () {
                     />
                 </div>
                 <div className="my-4">
-                    <Button
+                    {!isPending &&
+                    <FormButton
                         text="CREATE ACCOUNT"
                         onClick={handleSignup}
                     />
+                    }
                 </div>
                 <div>
                     <LoginSignupToggle 
@@ -75,6 +83,8 @@ function SignupForm () {
                         promptText="Or sign-up with:"
                     />
                 </div>
+                { isPending && <FormButton text="LOADING" disabled/> }
+                { error && <p>{error}</p> }
             </form>
         </div>
     );

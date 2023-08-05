@@ -31,7 +31,7 @@ function LineupDay3() {
             {bandsDay3.map((band, index) => (
             <ListItem key={index} className="flex flex-col text-center flex-1">
               <BandButton
-                className="bg-orange-300 font-bold text-pale-100 text-3xl shadow-sectionheading-shadow min-w-max mb-8">
+                className="bg-orange-300 font-bold text-pale-100 text-3xl shadow-sectionheading-shadow mb-8">
                   {band}
               </BandButton>
             </ListItem> 

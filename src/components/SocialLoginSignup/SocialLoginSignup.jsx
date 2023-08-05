@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { IconButton, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
@@ -7,15 +8,39 @@ import FacebookIcon from "../../assets/images/facebook-loginsignup.svg";
 import GoogleIcon from "../../assets/images/google-loginsignup.svg";
 import GitHubIcon from "../../assets/images/github-loginsignup.svg";
 
+// firebase auth
+import { auth, GoogleAuthProvider, GithubAuthProvider, FacebookAuthProvider, signInWithPopup } from '../../firebase/config';
+
+
 export default function SocialLoginSignup({ promptText, altText }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  
+  const navigate = useNavigate();
 
-  const handleSocialLogin = (provider) => {
-    // Add your Firebase authentication logic for social login here
-    // You can use the "provider" parameter to determine which social login option was clicked (e.g., 'facebook', 'google', 'github')
-    // You can also use the "isLoggingIn" state to determine if the user is logging in or signing up
-    // Perform the necessary actions based on the authentication response
+  const handleSignIn = async (provider, providerName) => {
+    try {
+      const authProvider = getAuthProvider(provider);
+      await signInWithPopup(auth, authProvider);
+      setIsLoggedIn(true);
+
+      // Upon successful login, return the user to the home page
+      navigate('/');
+
+    } catch (err) {
+      console.error(`${providerName} login error:`, err);
+    }
+  };
+
+  const getAuthProvider = (provider) => {
+    switch (provider) {
+      case 'google':
+        return new GoogleAuthProvider();
+      case 'facebook':
+        return new FacebookAuthProvider();
+      case 'github':
+        return new GithubAuthProvider();
+      default:
+        throw new Error('Invalid provider');
+    }
   };
 
   const Prompt = styled(Typography) ({
@@ -34,7 +59,7 @@ export default function SocialLoginSignup({ promptText, altText }) {
       </div>
       <div className="flex gap-3">
         <IconButton
-          onClick={() => handleSocialLogin("google")}
+          onClick={() => handleSignIn('google', 'Google')}
         >
           <img 
             src={GoogleIcon}
@@ -44,7 +69,7 @@ export default function SocialLoginSignup({ promptText, altText }) {
           />
         </IconButton>
         <IconButton
-          onClick={() => handleSocialLogin("facebook")}
+          onClick={() => handleSignIn('facebook', 'Facebook')}
         >
           <img 
             src={FacebookIcon}
@@ -54,7 +79,7 @@ export default function SocialLoginSignup({ promptText, altText }) {
           />
         </IconButton>
         <IconButton
-          onClick={() => handleSocialLogin("github")}
+          onClick={() => handleSignIn('github', 'Github')}
         >
           <img 
             src={GitHubIcon}
