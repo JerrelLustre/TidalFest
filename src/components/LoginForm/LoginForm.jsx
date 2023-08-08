@@ -1,19 +1,26 @@
 import { useState } from 'react';
+import { useLogin } from '../../hooks/useLogin';
+import { useAuthContext } from '../../hooks/useAuthContext';
 
 import { TextField } from "@mui/material";
 
-import Button from "../Button";
+import FormButton from "../FormButton";
 import LoginSignupToggle from "../LoginSignupToggle";
 import SocialLoginSignup from '../SocialLoginSignup';
 
-function LoginForm () {
+function LoginForm() {
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-  
-    const handleLogin = () => {
-      // Handle authentication here
-    };
-  
+
+    const { login, error, isPending } = useLogin();
+    const { user } = useAuthContext();
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        login(email, password)
+    }
+
     return (
         <div className="pb-24">
             <form className="flex flex-col items-center gap-8 mx-auto bg-pale-100 border border-8 border-red-200 rounded-lg px-8 pt-6 pb-10 w-80">
@@ -38,10 +45,12 @@ function LoginForm () {
                     />
                 </div>
                 <div className="my-4">
-                    <Button 
-                        text="LOGIN"
+                    <FormButton
+                        disabled={isPending}
+                        text={isPending ? "Logging in..." : "LOGIN"}
                         onClick={handleLogin}
                     />
+                    {error && <p>{error}</p>}
                 </div>
                 <div>
                     <LoginSignupToggle 

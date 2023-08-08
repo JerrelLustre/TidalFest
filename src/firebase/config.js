@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app'
 import { getAuth, 
         createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
         updateProfile,
         GoogleAuthProvider,
         GithubAuthProvider,
@@ -27,6 +28,7 @@ export const auth = getAuth(firebaseApp);
 
 export { 
     createUserWithEmailAndPassword, 
+    signInWithEmailAndPassword,
     updateProfile,
     signInWithPopup,
     GoogleAuthProvider,

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useAuthContext } from "../../hooks/useAuthContext";
 import { useNavigate } from "react-router-dom";
 import { IconButton, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
@@ -19,20 +20,37 @@ import {
 
 
 export default function SocialLoginSignup({ promptText, altText }) {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
+  const { user } = useAuthContext();
+
+  const [errorMessage, setErrorMessage] = useState(null);
 
   const handleSignIn = async (provider, providerName) => {
     try {
+
+      // Check is user is already authenticated
+      if (user) {
+        const providerData = user.providerData;
+
+        const isAuthenticatedWithProvider = providerData.some(
+          (data) => data.providerId === `${provider}.com`
+        );
+
+        if (isAuthenticatedWithProvider) {
+          setErrorMessage(`User is already authenticated with ${providerName}`);
+          return;
+        }
+      }
+
       const authProvider = getAuthProvider(provider);
       await signInWithPopup(auth, authProvider);
-      setIsLoggedIn(true);
 
       // Upon successful login, return the user to the home page
       navigate('/');
 
-    } catch (err) {
-      console.error(`${providerName} login error:`, err);
+    } catch (error) {
+      console.error(`${providerName} login error:`, error);
+      setErrorMessage(error.message);
     }
   };
 
@@ -94,6 +112,11 @@ export default function SocialLoginSignup({ promptText, altText }) {
             height="auto"
           />
         </IconButton>
+      </div>
+      <div>
+      {errorMessage && (
+          <p className="text-red-500">{errorMessage}</p>
+        )}
       </div>
     </div>
   );

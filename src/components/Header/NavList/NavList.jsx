@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ListItem } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { useAuthContext } from "../../../hooks/useAuthContext";
+import { useLogout } from "../../../hooks/useLogout";
 
 function NavList() {
 
@@ -15,6 +16,7 @@ function NavList() {
 
   // check user existence to display different nav buttons
   const { user } = useAuthContext()
+  const { logout } = useLogout()
 
   return (
     <ul className="flex w-full flex-col gap-2 p-4 tablet:p-0 tablet:flex-row tablet:items-center tablet:justify-between">
@@ -56,7 +58,7 @@ function NavList() {
         { user ? (
           <button 
             className="font-montserrat font-bold"
-            // onClick={logout}
+            onClick={logout}
           >
             Logout
           </button> ) : (
