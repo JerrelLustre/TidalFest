@@ -6,6 +6,7 @@ import {
 import { ListItem, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { useAuthContext } from "../../hooks/useAuthContext";
+import { useLogout } from "../../hooks/useLogout";
 
 // assets
 import MenuIcon from '@mui/icons-material/Menu';
@@ -32,6 +33,7 @@ export default function Header() {
 }))
 
   const { user } = useAuthContext()
+  const { logout } = useLogout()
 
   const [ mobileMenu, setMobileMenu ] = useState(false)
   const navigate = useNavigate()
@@ -52,7 +54,7 @@ export default function Header() {
 
   const navList = [
     { title: "Home", path: "/" },
-    { title: "Buy Tickets", path: "/tickets/order" },
+    { title: "Buy Tickets", path: user ? "/tickets/order" : "/account/login" },
     { title: "Lineup", path: "/lineup" },
     { title: "faq", path: "/faq" }
   ]
@@ -92,7 +94,7 @@ export default function Header() {
             { user ? (
               <button 
                 className="font-montserrat font-bold"
-                // onClick={logout()}
+                onClick={logout()}
               >
                 Logout
               </button> ) : (
@@ -117,7 +119,7 @@ export default function Header() {
         </nav>
         { mobileMenu &&
         <nav className="absolute left-0 top-[100px] -z-10 bg-orange-200  w-screen h-screen">
-          <ul className="flex w-full h-screen flex-col gap-2 p-4 tablet:p-0 tablet:flex-row tablet:items-center tablet:justify-between">
+          <ul className="flex w-full h-mobileMenu flex-col gap-2 p-4 tablet:p-0 tablet:flex-row tablet:items-center tablet:justify-between">
             <div className="flex flex-col gap-2 tablet:flex-row tablet:items-center tablet:gap-6">
             {navList.map((item, index) => (
               <Link 
@@ -138,8 +140,8 @@ export default function Header() {
             <div className="text-pale-200 my-2 flex justify-center flex-col gap-3 tablet:mb-0 tablet:mt-0 tablet:flex-row tablet:items-center tablet:gap-6">
             { user ? (
               <button 
-                className="font-montserrat font-bold"
-                // onClick={logout()}
+                className="font-montserrat font-bold flex justify-center items-center"
+                onClick={logout()}
               >
                 <MobileMenu 
                   variant="h2"
