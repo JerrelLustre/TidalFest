@@ -1,9 +1,22 @@
-import React from 'react'
+import { Outlet } from "react-router-dom"
+import { PayPalScriptProvider } from "@paypal/react-paypal-js"
+import { OrderContextProvider } from "../../context/OrderContext"
 
 export default function Tickets() {
+  
+  const initialOptions = {
+    "client-id": `${process.env.REACT_APP_PAYPAL_CLIENTID}`,
+    "currency": "CAD",
+    "components": "buttons",
+  }
+
   return (
-    <div>
-        This is Tickets page.
-    </div>
+    <>
+      <OrderContextProvider>  
+        <PayPalScriptProvider options={initialOptions} >
+          <Outlet />
+        </PayPalScriptProvider>
+      </OrderContextProvider>
+    </>
   )
 }

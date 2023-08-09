@@ -1,70 +1,145 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
+<!-- PROJECT OVERVIEW -->
+<br />
+<div align="center">
+  <h1 align="center">TidalFest</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <p align="center">
+    SPA promotional site made for a fictional music festival. Create account to purchase tickets through PayPal.
+    <br />
+    <br />
+    <a href="https://daily-protein.seojeongkim.com/" target="_blank">🚀 View Live Demo</a>
+    ·
+    <a href="https://github.com/JerrelLustre/TidalFest">📝 Explore Docs</a>
+  </p>
+</div>
 
-## Available Scripts
+<br />
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
+## 📗 Table of Contents
+- [About Project](#about-project)
+- [Roadmap](#roadmap)
+- [Built With](#built-with)
+- [Collaborators](#collaborators)
+- [Acknowledgments](#acknowledgments)
+- [License](#license)
+- [Contact](#contact)
 
-### `npm start`
+<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- ABOUT PROJECT -->
+## 📖 About Project 
+<a name="about-project"></a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Purpose
+Tidalfest is a promotional site made for a fictional music festival. The main content of the site involves telling users event details and the musician lineup. In order to fulfill payment process, user requires to authenticate into website and proceed through the PayPal payment gateway.
 
-### `npm test`
+### Key Features
+- Responsive design
+- Signin / Signup account to purchase tickets
+- Integrate PayPal Sandbox to simulate the payment process
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br />
 
-### `npm run build`
+<!-- ROADMAP -->
+## 🔭 Roadmap 
+<a name="roadmap"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> Version 1.0 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+At this stage, I focused on developing frontend style and functionalities. So I implemented Firebase firestore for database to achieve CRUD operations as serverless. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [X] Design client side view with React.js and Sass
+- [X] Feat RESTful API to fetch food data and create search function
+- [X] Feat protein calculation function
 
-### `npm run eject`
+<br/>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<p>
+  <a href="https://daily-protein-v1.seojeongkim.com/" target="_blank">
+    🚀 View V1 Live Demo
+  </a>
+</p>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+> Version 2.0
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+In Version 2.0, I separated frontend and backend to practice full-stack development workflow. On the client side, I implemented a robust CSS framework and libraries to ensure a consistent design. Additionally, I refactored the code using TypeScript for better maintainability and ease of debugging. To manage states across components, I integrated Redux Toolkit. For the backend, I built a server using Express.js and connected it to a MongoDB Atlas database instead of Firebase.
 
-## Learn More
+- [X] Organize folder structure to 'clent' and 'server'
+- [X] Design client side view with Material UI and Tailwind CSS
+- [X] Refactor code with Typescript
+- [X] Feat Redux Tookit to manage states for Auth and forms
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br/>
 
-### Code Splitting
+<p>
+  <a href="https://daily-protein.seojeongkim.com/" target="_blank">
+    🚀 View V2 Live Demo
+  </a>
+  ·
+  <a href="https://github.com/JerrelLustre/TidalFest" target="_blank">
+    📝 Explore V2 Docs
+  </a>
+</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<br />
 
-### Analyzing the Bundle Size
+<!-- BUILT WITH -->
+## 🛠 Built With 
+<a name="built-with"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+> Frontend
+<p>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" title="React.js" width="40" height="40"/> &nbsp;
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" title="Material UI" width="35" height="35" /> &nbsp;
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" title="Tailwind Css" width="40" height="40" /> &nbsp;
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg" title="Firebase" width="40" height="40"/> &nbsp;   
+</p>
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<br />
 
-### Advanced Configuration
+<!-- Collaborators -->
+## 👥 Collaborators
+<a name="collaborators"></a>
+Arik Blaustein
+Emily Boyd
+Jen Seojeong Kim
+Jerrel Lustre
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<br />
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<!-- ACKNOWLEDGEMENTS -->
+## 🙏 Acknowledgments
+<a name="acknowledgments"></a>
 
-### `npm run build` fails to minify
+* [PayPal Developers docs](https://developer.paypal.com/home)
+* [Firebase Github open source code](https://github.com/firebase/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<br />
+
+<!-- LICENSE -->
+## 📝 License
+<a name="license"></a>
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<br />
+
+<!-- CONTACT -->
+## 📨 Contact
+<a name="contact"></a>
+
+- **Jen Kim** - [@jenny_seojeong_kim](https://www.linkedin.com/in/jenny-seojeong-kim/) - hello@seojeongkim.com
+
+- **Come to see more projects** - [Portfolio](https://seojeongkim.com)
+
+<br />
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+

@@ -1,10 +1,25 @@
-import { Button } from '@mui/material';
+import HeroBanner from "./HeroBanner";
+import Musicians from "./Musicians";
+import About from "./About";
+import SectionLayout from "../../layouts/SectionLayout";
+
+import HomeBg from "../../assets/images/section-bg.webp";
+
 
 export default function Home() {
   return (
-    <div className="text-3xl font-bold underline">
-      Homepage
-      <Button className="hover:bg-green-300"> Test Button </Button>
-    </div>
+      <>
+        <HeroBanner />
+        <SectionLayout
+          backgroundImage={HomeBg}
+        >
+          <Musicians />
+        </SectionLayout>
+        <SectionLayout
+          backgroundImage={HomeBg}
+        >
+          <About />
+        </SectionLayout>
+      </>
   )
 }
