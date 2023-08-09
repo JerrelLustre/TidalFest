@@ -44,13 +44,15 @@ function LoginForm() {
                         variant="standard"
                     />
                 </div>
-                <div className="my-4">
+                <div className="my-4 text-center">
                     <FormButton
                         disabled={isPending}
                         text={isPending ? "Logging in..." : "LOGIN"}
                         onClick={handleLogin}
                     />
-                    {error && <p>{error}</p>}
+                </div>
+                <div>
+                    {error && <p className="text-red-500">{error}</p>}
                 </div>
                 <div>
                     <LoginSignupToggle 
