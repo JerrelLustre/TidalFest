@@ -16,13 +16,15 @@ export const OrderContextProvider = ({ children }) => {
     const [ total, setTotal ] = useState(19.03)
 
     const handleIncrement = () => {
-        setQty(qty + 1) 
-        const newPrice = (price + 16.99).toFixed(2)
-        setPrice(parseFloat(newPrice))
-        const newTax = (tax + 2.04).toFixed(2)
-        setTax(parseFloat(newTax))
-        const newTotal = (total + 19.03).toFixed(2)
-        setTotal(parseFloat(newTotal))
+        if(qty <= 7) {
+            setQty(qty + 1) 
+            const newPrice = (price + 16.99).toFixed(2)
+            setPrice(parseFloat(newPrice))
+            const newTax = (tax + 2.04).toFixed(2)
+            setTax(parseFloat(newTax))
+            const newTotal = (total + 19.03).toFixed(2)
+            setTotal(parseFloat(newTotal))
+        }
     }
 
     const handleDecrement = () => {

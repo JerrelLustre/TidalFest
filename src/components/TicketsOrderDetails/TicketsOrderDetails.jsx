@@ -7,7 +7,7 @@ export default function TicketsOrderDetails() {
   const texts = [
     {
       titleTxt: "Validity",
-      bodyTxt: "3-Day Pass"
+      bodyTxt: "One Day Pass"
     },
     {
       titleTxt: "Persons Per Pass",
@@ -20,6 +20,10 @@ export default function TicketsOrderDetails() {
     {
       titleTxt: "Price",
       bodyTxt: "$16.99"
+    },
+    {
+      titleTxt: "Maximum Passes Per Order",
+      bodyTxt: "8"
     },
     {
       titleTxt: "Inclusions",

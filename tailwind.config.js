@@ -73,6 +73,9 @@ module.exports = {
       },
       minHeight: {
         'TicketsThankyou': 'calc(100vh - 200px)',
+      },
+      height: {
+        'mobileMenu': 'calc(100vh - 100px)',
       }
     },
     },
