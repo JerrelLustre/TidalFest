@@ -24,7 +24,6 @@ export const useSignup = () => {
             // signup user 
             const userCredential = await createUserWithEmailAndPassword(auth, email, password)
             const user = userCredential.user;
-            console.log(user)
 
             // **** dispatch an action(user) to the AuthContext reducer **** //
             dispatch({ type: 'LOGIN', payload: user })

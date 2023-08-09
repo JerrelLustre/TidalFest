@@ -94,7 +94,7 @@ export default function Header() {
             { user ? (
               <button 
                 className="font-montserrat font-bold"
-                onClick={logout()}
+                onClick={logout}
               >
                 Logout
               </button> ) : (
@@ -141,7 +141,7 @@ export default function Header() {
             { user ? (
               <button 
                 className="font-montserrat font-bold flex justify-center items-center"
-                onClick={logout()}
+                onClick={logout}
               >
                 <MobileMenu 
                   variant="h2"
