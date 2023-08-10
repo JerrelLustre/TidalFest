@@ -48,16 +48,16 @@ Tidalfest is a promotional site made for a fictional music festival. The main co
 
 > Version 1.0 
 
-At this stage, I focused on developing frontend style and functionalities. So I implemented Firebase firestore for database to achieve CRUD operations as serverless. 
+In version 1.0, we created a static website using HTML and CSS, aiming to align with the UI/UX design wireframes. We simulated the main features, which included a schedule builder and ticket purchasing, but they were not fully functional.
 
-- [X] Design client side view with React.js and Sass
-- [X] Feat RESTful API to fetch food data and create search function
-- [X] Feat protein calculation function
+- [X] Set root css variables and build layout
+- [X] Simulate schedule builder and ticket purchase functionalities with static HTML and JavaScript
+- [ ] Style responsive design
 
 <br/>
 
 <p>
-  <a href="https://daily-protein-v1.seojeongkim.com/" target="_blank">
+  <a href="https://tidalfest.emily-boyd.com" target="_blank">
     🚀 View V1 Live Demo
   </a>
 </p>
@@ -66,18 +66,20 @@ At this stage, I focused on developing frontend style and functionalities. So I 
 
 > Version 2.0
 
-In Version 2.0, I separated frontend and backend to practice full-stack development workflow. On the client side, I implemented a robust CSS framework and libraries to ensure a consistent design. Additionally, I refactored the code using TypeScript for better maintainability and ease of debugging. To manage states across components, I integrated Redux Toolkit. For the backend, I built a server using Express.js and connected it to a MongoDB Atlas database instead of Firebase.
+In version 2.0, we ensured version control and managed the collaborative work process using GitHub. We decided to rebuild the website as a Single Page Application (SPA) with React.js and focused on implementing two key functionalities: authentication and the ticket purchasing process.
 
-- [X] Organize folder structure to 'clent' and 'server'
-- [X] Design client side view with Material UI and Tailwind CSS
-- [X] Refactor code with Typescript
-- [X] Feat Redux Tookit to manage states for Auth and forms
+- [X] Setup version control work process and projects board with GitHub
+- [X] Build website layout with React.js
+- [X] Style responsive design with Material UI and Tailwind CSS
+- [X] Implement Fireabase Auth for user authentication
+- [X] Implement PayPal API for ticket purchase process
+- [x] Test two main functionalities under different browsers
 
 
 <br/>
 
 <p>
-  <a href="https://daily-protein.seojeongkim.com/" target="_blank">
+  <a href="https://tidalfest.seojeongkim.com" target="_blank">
     🚀 View V2 Live Demo
   </a>
   ·
@@ -92,7 +94,6 @@ In Version 2.0, I separated frontend and backend to practice full-stack developm
 ## 🛠 Built With 
 <a name="built-with"></a>
 
-> Frontend
 <p>
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" title="React.js" width="40" height="40"/> &nbsp;
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" title="Material UI" width="35" height="35" /> &nbsp;
@@ -106,13 +107,36 @@ In Version 2.0, I separated frontend and backend to practice full-stack developm
 <!-- Collaborators -->
 ## 👥 Collaborators
 <a name="collaborators"></a>
-Arik Blaustein
-Emily Boyd
-Jen Seojeong Kim
-Jerrel Lustre
+
+> Arik Blaushtein | UI/UX Design, QA
+<p>
+  <a href="https://github.com/ArikB21" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/126725560?v=4" width="50" height="50" style="border-radius: 50%" />
+  </a>
+</p>
+
+> Emily Boyd | Develop
+<p>
+  <a href="https://github.com/Boyderr" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/126724794?v=4" width="50" height="50" style="border-radius: 50%" />
+  </a>
+</p>
+
+> Jerrel Lustre | Develop, UI/UX Design
+<p>
+  <a href="https://github.com/JerrelLustre" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/98724737?v=4" width="50" height="50" style="border-radius: 50%" />
+  </a>
+</p>
+
+> Jen Seojeong Kim | Develop
+<p>
+  <a href="https://github.com/jennysujukim" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/126724840?v=4" width="50" height="50" style="border-radius: 50%" />
+  </a>
+</p>
 
 <br />
-
 
 <!-- ACKNOWLEDGEMENTS -->
 ## 🙏 Acknowledgments
@@ -135,9 +159,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## 📨 Contact
 <a name="contact"></a>
 
-- **Jen Kim** - [@jenny_seojeong_kim](https://www.linkedin.com/in/jenny-seojeong-kim/) - hello@seojeongkim.com
+- **Arik Blaushtein** - [@arik_blaushtein](https://www.arikblaushtein.com) - arikblaushtein007@gmail.com
 
-- **Come to see more projects** - [Portfolio](https://seojeongkim.com)
+- **Emily Boyd** - [@emily_boyd](https://www.emily-boyd.com) - emilyllboyd@gmail.com
+
+- **Jerrel Lustre** - [@jerrel_lustre](https://jerrellustre.com) - jerrellustre626@gmail.com
+
+- **Jen Seojeong Kim** - [@jenny_seojeong_kim](https://seojeongkim.com) - hello@seojeongkim.com
 
 <br />
 
