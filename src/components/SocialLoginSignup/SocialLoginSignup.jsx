@@ -5,7 +5,6 @@ import { IconButton, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 // assets
-import FacebookIcon from "../../assets/images/facebook-loginsignup.svg";
 import GoogleIcon from "../../assets/images/google-loginsignup.svg";
 import GitHubIcon from "../../assets/images/github-loginsignup.svg";
 
@@ -14,7 +13,6 @@ import {
   auth, 
   GoogleAuthProvider, 
   GithubAuthProvider, 
-  FacebookAuthProvider, 
   signInWithPopup 
 } from '../../firebase/config';
 
@@ -58,8 +56,6 @@ export default function SocialLoginSignup({ promptText, altText }) {
     switch (provider) {
       case 'google':
         return new GoogleAuthProvider();
-      case 'facebook':
-        return new FacebookAuthProvider();
       case 'github':
         return new GithubAuthProvider();
       default:
@@ -89,16 +85,6 @@ export default function SocialLoginSignup({ promptText, altText }) {
             src={GoogleIcon}
             alt={altText}
             width="48.7px"
-            height="auto"
-          />
-        </IconButton>
-        <IconButton
-          onClick={() => handleSignIn('facebook', 'Facebook')}
-        >
-          <img 
-            src={FacebookIcon}
-            alt={altText}
-            width="45.86px"
             height="auto"
           />
         </IconButton>
