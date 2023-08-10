@@ -13,7 +13,7 @@ function Body({ children }) {
 
     return (
         <div className="w-full max-w-bodycontent-container" >
-            <BodyContent className="rounded-lg bg-pale-200 text-jade-300 font-normal p-42 leading-150">
+            <BodyContent className="rounded-lg bg-pale-100 text-jade-300 font-normal p-42 leading-150">
                 {children}
             </BodyContent>
         </div>
