@@ -8,7 +8,7 @@
     SPA promotional site made for a fictional music festival. Create account to purchase tickets through PayPal.
     <br />
     <br />
-    <a href="https://daily-protein.seojeongkim.com/" target="_blank">🚀 View Live Demo</a>
+    <a href="https://tidalfest.seojeongkim.com" target="_blank">🚀 View Live Demo</a>
     ·
     <a href="https://github.com/JerrelLustre/TidalFest">📝 Explore Docs</a>
   </p>
